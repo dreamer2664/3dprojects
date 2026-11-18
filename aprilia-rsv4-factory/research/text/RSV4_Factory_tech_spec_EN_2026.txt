@@ -1,0 +1,59 @@
+ 
+ 
+ 
+RSV4 FACTORY - TECHNICAL SPECIFICATIONS 
+ 
+ 
+ 
+ENGINE 
+V4 (65°), 4 valves per cylinder, liquid-cooled with Ride-By-Wire 
+BORE AND STROKE 
+81 x 53.32 mm 
+DISPLACEMENT 
+1,099 cc 
+MAX. POWER 
+220 HP (161.8 kW) @ 13,000 rpm 
+MAX. TORQUE 
+127 Nm @ 10,800 rpm 
+GEARBOX 
+6 speed 
+CLUTCH 
+Multiplate wet clutch with slipper system 
+FRAME 
+Twin spar aluminum frame 
+FRONT SUSPENSION 
+Öhlins Ø 43 mm electronically controlled USD fork, fully adjustable, 125 mm 
+wheel travel 
+REAR SUSPENSION 
+Öhlins electronically controlled monoshock, fully adjustable, 115 mm wheel 
+travel 
+FRONT BRAKE 
+Double Ø 330 mm floating disc. Brembo HYPURE radial calipers 
+REAR BRAKE 
+Ø 220 mm disc. Brembo caliper 
+FRONT WHEEL 
+Forged wheel 17" x 3.5", 5 split spokes 
+REAR WHEEL 
+Forged wheel 17" x 6", 5 split spokes 
+SEAT HEIGHT 
+840 mm 
+FUEL TANK CAPACITY 
+18 lt 
+WET WEIGHT* 
+204 Kg 
+STANDARD 
+FEATURES 
+Full LED headlights and indicators with light signature. Bonded 5” TFT 
+dashboard with Race mode. Backlit switchcubes. Aprilia MIA. GPS and 
+Lap Trigger. APRC system with 6-axis inertial platform: Engine Maps 
+(AEM), Engine Brake (AEB), Cornering ABS (3 maps and Rear Wheel Lift- 
+up Mitigation), Traction Control (ATC), adaptive and predictive Wheelie 
+Control (AWC), 6 Riding Modes. Aprilia Quick Shift (AQS). Bending lights, 
+Aprilia Cruise Control (ACC), Aprilia Launch Control (ALC), Aprilia Pit 
+Limiter (APL), Aprilia Slide Control (ASC). Öhlins electronically controlled 
+steering damper. CornerByCorner Engine + Suspension. Metal Braided 
+Brake Hoses. Passenger seat and Aero-cover 
+ 
+ 
+*According to guideline VO (EU) 168/2013 with all fluids, with standard equipment and fuelled with at least 90% of usable 
+tank volume 

@@ -1,0 +1,94 @@
+ 
+ 
+ 
+RSV4 FACTORY - TECHNICAL SPECIFICATIONS 
+ 
+ENGINE TYPE 
+Aprilia 4 longitudinal 65° V4 cylinder, 4-strokes, liquid cooling system, double 
+overhead camshaft (DOHC), four valves per cylinder 
+BORE AND STROKE 
+81 x 53.32 mm 
+TOTAL ENGINE 
+CAPACITY 
+1.099 cc 
+COMPRESSION RATIO 
+13.6:1 
+MAXIMUM POWER AT 
+CRANKSHAFT 
+217 HP (159.5 kW) at 13,000 rpm 
+MAXIMUM TORQUE AT 
+CRANKSHAFT 
+125 Nm at 10,500 rpm 
+POWER SUPPLY 
+Airbox with front dynamic air intakes. 4 Marelli 48-mm throttle bodies with 8 
+injectors and Ride-By-Wire engine management. 
+TRANSMISSION 
+6-speed cassette type gearbox 
+Gear lever with Aprilia Quick Shift electronic system (AQS) 
+CLUTCH 
+Multi plate wet clutch with mechanical slipper system 
+PRIMARY DRIVE 
+Straight cut gears and integrated flexible coupling, drive ratio: 73/44 (1,659) 
+SECONDARY DRIVE 
+Chain: Drive ratio: 41/16 (2,562) 
+CONTROLS 
+MANAGEMENT 
+APRC system (Aprilia Performance Ride Control) that includes engine maps 
+(AEM), engine brake control (AEB), traction control (ATC), wheelie control 
+(AWC), launch control (ALC), cruise control (ACC), speed limiter (APT). 6 
+riding modes (3 Road, 3 Track) 
+CHASSIS 
+Aluminium dual beam chassis with pressed and cast sheet elements 
+Available adjustments: headstock position and angle, engine height, 
+swingarm pin height 
+Smart EC 2.0 electronically managed Öhlins steering damper  
+FRONT SUSPENSION 
+Smart EC 2.0 electronically managed Öhlins NIX fork.  43 mm stanchions, 
+with TIN surface treatment Aluminium radial calliper mounts, adjustable in 
+hydraulic compression and rebound damping and spring pre-load, 125 mm 
+travel  
+REAR SUSPENSION 
+Upside-down double braced aluminium swingarm; 
+Öhlins TTX monoshock with Smart EC 2.0 electronically managed piggy-
+back, fully adjustable in: spring pre-load, wheelbase and hydraulic 
+compression and rebound damping. 115 mm travel 
+BRAKES 
+Front: Dual 330-mm diameter floating stainless steel disc with lightweight 
+stainless steel rotor and aluminium flange with 6 pins. Brembo Stylema® 
+monobloc radial callipers with 4   30 mm opposing pistons. Sintered pads. 
+Radial pump and metal braided brake hose 
+Rear: 220 mm diameter disc; Brembo calliper with two  32 mm separate 
+pistons. Sintered pads. Pump with integrated tank and metal braided hose 
+Bosch ABS with cornering function and 3 map settings, equipped with RLM 
+(Rear wheel Lift-up Mitigation) strategy 
+WHEELS 
+Forged aluminium alloy wheels, completely machined, with 5 split spoke 
+design. 
+Front: 3.5”x17” 
+Rear: 6”x17” 
+TYRES 
+Radial tubeless. 
+front: 120/70 ZR 17 
+rear: 200/55 ZR 17 (alternative: 190/50 ZR 17; 190/55 ZR 17) 
+DIMENSIONS 
+ 
+Wheelbase: 1435.8 mm 
+Length: 2055 mm 
+Width: 735 mm 
+Saddle height: 845 mm  
+Headstock angle: 24.6° 
+
+Trail: 104.5 mm 
+KERB WEIGHT 
+202 kg (90% fuel) 
+EMISSIONS 
+COMPLIANCE 
+Euro 5 
+CONSUMPTION 
+6.90 litres/100 km 
+CO2 EMISSIONS 
+160 g/km 
+FUEL TANK CAPACITY 
+17.9 litres (including 4-litre reserve) 
+ 
+ 

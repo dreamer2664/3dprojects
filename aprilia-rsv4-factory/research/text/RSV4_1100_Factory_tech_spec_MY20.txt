@@ -1,0 +1,56 @@
+ 
+ 
+ 
+RSV4 1100 FACTORY - TECHNICAL SPECIFICATIONS 
+ 
+ENGINE Aprilia V4 65°, 4-stroke, liquid cooled, 
+ 
+double overhead camshaft /DOHC), four valves per cylinder. 
+Ride By Wire with 3 engine mappings (Sport, Race, Track) 
+DISPLACEMENT 1077 cc 
+MAX. POWER AT 
+CRANKSHAFT 
+217 HP (159,5 kW) at 13,200 rpm 
+MAX. TORQUE AT 
+CRANKSHAFT 
+122 Nm at 11,000 rpm 
+FRONT SUSPENSION Öhlins NIX upside-down fork, Ø 43 mm stanchions.Electronics management 
+system  
+ 
+Ohlins Smart EC 2.0 (OBTi) 
+125 mm wheel travel 
+REAR SUSPENSION Double-sided aluminium swingarm 
+Öhlins TTX single shock absorber with piggy-back, Electronics management 
+system  
+Ohlins Smart EC 2.0 (OBTi) 
+M10 progressive linkage. 115 mm wheel travel 
+FRONT BRAKE Ø 330 mm floating double disc with aluminium flange 
+Brembo STYLEMA® 4-piston mono-block radial calipers 
+Radial pump and metal braid brake pipe 
+REAR BRAKE Ø 220mm disc. Brembo Ø 32 mm 2 isolated piston caliper Pump 
+with integrated tank and metal braid pipe 
+ABS SYSTEM C-ABS Bosch 9.1MP, de-selectable, adjustable to 3 mappings, 
+with RLM (Rear wheel Lift-up Mitigation) strategy 
+FRONT WHEEL 3.5” x 17” forged aluminium allow wheel, fully machined, 
+with 5 double spokes. Tyre: 120/70 ZR 17” 
+REAR WHEEL 6” x 17” forged aluminium allow wheel, fully machined, 
+with 5 double spokes. Tyre 200/55 ZR 17” 
+SADDLE HEIGHT 840 mm 
+FUEL TANK CAPACITY 18.5 litres - 4 reserve 
+DRY WEIGHT 177 kg 
+WET WEIGHT 199 kg 
+EMISSIONS 
+COMPLIANCE 
+Euro 4 
+EMISSIONS  155 g/km (CO2) 
+CONSUMPTION 6,50 L/100 km 
+ELECTRONIC 
+MANAGEMENT 
+APRC (Aprilia Performance Ride Control) system including 
+traction control (ATC), wheelie control (AWC), 
+launch control (ALC), quick shift (AQS), 
+cruise control (ACC), pit limiter (APL), cornering ABS, 
+all independently settable and de-selectable. 
+V4-MP predisposition 
+COLOUR RANGE Atomico racer 
+ 
