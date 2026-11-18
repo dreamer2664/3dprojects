@@ -25,3 +25,9 @@
 
 ## Rendering
 - [ ] 20 required renders (see README)
+
+## In progress
+- [x] Full procedural model (464 objects, 11 modules)
+- [ ] 20+ final renders (batch running next)
+- [ ] Orthographic QC vs reference photos
+- [ ] SOURCE_REGISTER: add Poly Haven entries
