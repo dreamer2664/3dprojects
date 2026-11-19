@@ -33,3 +33,27 @@
 ## D-007 Things deliberately simplified (to be revisited, tracked in TODO)
 - Wiring loom: main trunks, connectors and visible sensor leads only (no full loom).
 - Fasteners: visible exterior fasteners modelled individually; hidden ones omitted.
+
+## D-008 Livery by photo-traced projection textures
+The 2026 "Shakedown Indigo" graphics are classified per-pixel from the four official studio
+photos (left/right/front/top) into a 6-colour palette + roughness map in model space, then
+re-projected onto the panels in the shader (side selected by Y sign, top/front by normal).
+Exact logos ("aprilia", "RSV4") therefore come from Aprilia's own photography rather than
+re-drawn guesses.
+
+## D-009 CC0 environment assets
+Poly Haven CC0: studio_small_09, brown_photostudio_02, kloofendal_48d puresky (HDRIs) and
+asphalt_02 PBR set for the outdoor shot. Recorded in SOURCE_REGISTER.
+
+## D-010 Hard points revised (supersedes D-003 values)
+Measured tyre ODs from photo calibration: front 0.292 m, rear 0.315 m radius; swingarm pivot
+(0.520, 0, 0.465); crank (0.640, 0, 0.455). Authoritative values live in `scripts/geom.py`.
+
+## D-011 TFT graphic is a generic reconstruction
+The 5" TFT shows a procedurally drawn race-mode screen (PIL) with plausible data; it imitates
+the Aprilia layout style but is not a copy of the copyrighted UI.
+
+**D-014** Renders are deliverables: commit RENDERS/*.png to git (workspace snapshots are capped
+~128MB and may drop large PNGs on restart; the git remote is the durable store).
+**D-015** OIDN denoising only via --denoise 1 and only at ≤1.5MP output; above that, samples
+(64–96) instead of denoiser (OOM kills, measured >1GB spike).

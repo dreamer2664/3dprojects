@@ -44,3 +44,11 @@ Status key: ✅ opened & examined · ⚠️ partially accessible · ❌ inaccess
 - Range brochure (#4) — blocked. ❌
 
 **No engineering drawings were fabricated.** All internal dimensions not covered above are documented as assumptions in `DECISIONS.md`.
+
+## CC0 environment assets (Poly Haven, licence CC0)
+| # | Source | Date | Used for |
+|---|--------|------|----------|
+| 17 | polyhaven.com/a/studio_small_09 (2k HDR) | 2026-11-18 | Studio lighting/environment for hero + technical renders |
+| 18 | polyhaven.com/a/brown_photostudio_02 (2k HDR) | 2026-11-18 | Dark studio environment (rear hero, details, final) |
+| 19 | polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky (2k HDR) | 2026-11-18 | Outdoor/racetrack lighting (low front shot) |
+| 20 | polyhaven.com/a/asphalt_02 (diff/rough/nor_gl 2k) | 2026-11-18 | Ground texture for outdoor shot |
