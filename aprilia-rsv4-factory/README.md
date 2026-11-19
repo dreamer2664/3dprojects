@@ -12,3 +12,8 @@ Procedurally built Blender project (Blender 4.2 LTS).
 | `BUILD_LOG.md` · `DECISIONS.md` · `TODO.md` | Diary, assumptions, open items |
 
 Coordinate system: metres, Z up, +X forward, +Y rider's left, origin on the ground under the rear axle.
+
+## Re-rendering
+Blender 4.2.3 LTS is not stored in the repo. Install: download `blender-4.2.3-linux-x64.tar.xz` from
+download.blender.org into `~/.cache/bl/` (needs `libxkbcommon0`), then `scripts/render_all.sh [shot ...]`.
+Do not use `--denoise 1` on 2 GB machines: OIDN causes OOM kills.

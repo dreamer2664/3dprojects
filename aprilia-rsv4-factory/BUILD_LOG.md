@@ -97,3 +97,7 @@ pillion height all match p_18 within mm). 20 deliverable renders in RENDERS/.
 deleted scripts/MODELS on the remote. This commit restores the full project (scripts with all v5
 geometry fixes, MODELS/rsv4_factory_2026.blend, ASSETS, docs) + render_all.sh (no OIDN; wireframe
 subsurf OOM guard; final shot uses hero lighting). RENDERS were lost again with the sandbox and are re-rendered.
+
+**Nov 19, 07:40** Full set re-rendered via scripts/render_all.sh (20/20, 0 OOM kills, ~76 min, no OIDN).
+Photo overlay QC on new ortho_left: PASS. All 20 PNGs pushed to origin incrementally.
+Blender now lives in ~/.cache/bl (excluded from snapshots; reinstall if missing — see README).
