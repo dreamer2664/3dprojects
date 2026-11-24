@@ -188,6 +188,8 @@ blender -b -P validate.py -- --mode glb      #    GLB re-import check
 - `vintage_typewriter.blend`: 447 objects, 67+ materials, 56–58 packed images, all 10 collections present
 - `vintage_typewriter.glb`: re-imports cleanly — 447 objects / 429 meshes / 69 materials / 58 images (all textures embedded)
 - All meshes carry materials; no missing image files; contact shadows verified on all 16 renders
+- `vintage_typewriter.blend` opens in a **HERO-ready state** (exposure 0.05, HERO world/lights/floors — pressing F12 on open reproduces `renders/01_hero.png`); the 16 cameras ship hidden in the viewport only (unhide to orbit through them)
+- **360° orbit verification:** 120 additional preview renders (azimuth 0–345° in 15° steps × elevation 10°/25°/40°/55°/70°, 640×360, 32 samples, Cycles) checked for missing faces, see-through panels, floating or intersecting parts — none found
 
 ## Known limitations (honest notes)
 

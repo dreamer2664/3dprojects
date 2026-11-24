@@ -33,7 +33,7 @@ except Exception:
     pass
 sc.view_settings.view_transform = 'AgX'
 sc.view_settings.look = 'AgX - Medium High Contrast'
-sc.view_settings.exposure = 0.15
+sc.view_settings.exposure = 0.05
 sc.render.image_settings.file_format = 'PNG'
 sc.render.image_settings.color_mode = 'RGB'
 sc.render.image_settings.color_depth = '8'
@@ -835,12 +835,16 @@ badge_face.rotation_euler = (radians(90), 0, 0)
 move_to_collection(badge_face, "08_FASTENERS_AND_DETAILS")
 badge_face.data.materials.append(M["badge"])
 
+for _o in bpy.data.objects:
+    if _o.type == 'CAMERA':
+        _o.hide_viewport = True
+
 # ---------------------------------------------------- 10 LIGHTING (world, floors, lights)
 world = bpy.data.worlds.new("WORLD_studio")
 sc.world = world
 world.use_nodes = True
 bg = world.node_tree.nodes["Background"]
-bg.inputs["Color"].default_value = (0.115, 0.11, 0.105, 1.0)
+bg.inputs["Color"].default_value = (0.062, 0.060, 0.058, 1.0)
 bg.inputs["Strength"].default_value = 1.0
 
 floor_mat_dark = new_mat("MAT_floor_dark")
@@ -876,9 +880,9 @@ def add_light(name, energy, color, size_x, size_y, loc, target):
     o.rotation_euler = (Vector(target) - Vector(loc)).to_track_quat('-Z', 'Y').to_euler()
     return o
 
-add_light("LIGHT_key", 135, (1.0, 0.97, 0.92), 380, 260, (350, -260, 430), (0, 0, 70))
-add_light("LIGHT_fill", 60, (0.93, 0.96, 1.0), 540, 350, (-400, -240, 300), (0, 0, 70))
-add_light("LIGHT_rim", 105, (1.0, 0.98, 0.94), 520, 170, (30, 360, 430), (0, 20, 90))
+add_light("LIGHT_key", 10.2, (1.0, 0.97, 0.92), 380, 260, (350, -260, 430), (0, 0, 70))
+add_light("LIGHT_fill", 6.0, (0.93, 0.96, 1.0), 540, 350, (-400, -240, 300), (0, 0, 70))
+add_light("LIGHT_rim", 14.0, (1.0, 0.98, 0.94), 520, 170, (30, 360, 430), (0, 20, 90))
 
 # ---------------------------------------------------- 09 CAMERAS
 def add_camera(name, loc, target, lens, fstop, setup, macro=False):
@@ -899,6 +903,8 @@ def add_camera(name, loc, target, lens, fstop, setup, macro=False):
     o["macro"] = macro
     return o
 
+# cameras stay in the file but don't clutter the viewport when opened
+# (render.py only needs them to exist; unhide in the viewport if needed)
 add_camera("CAM_01_hero", (315, -400, 235), (0, 0, 68), 40, 5.6, "HERO")
 add_camera("CAM_02_front", (0, -580, 108), (0, 0, 82), 50, 8.0, "HERO")
 add_camera("CAM_03_side", (568, -38, 96), (0, 10, 82), 50, 8.0, "HERO")
