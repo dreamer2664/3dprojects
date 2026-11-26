@@ -3,3 +3,13 @@
 __pycache__/
 # Third-party dealer manual: kept in local archive only (size/rights); URL in SOURCE_REGISTER.md
 aprilia-rsv4-factory/research/pdf/RSV4_1100_Factory_Service_Station_Manual_2Q000401.pdf
+# victorian-rolltop-desk: transient / junk
+*.blend1
+*.blend@
+*.tmp
+*.log.tmp
+victorian-rolltop-desk/assets/victorian-rolltop-desk/_staging/
+victorian-rolltop-desk/renders/victorian-rolltop-desk/_debug/
+*.pat
+*.token
+github_pat*.txt
