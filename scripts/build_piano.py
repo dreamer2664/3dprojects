@@ -42,7 +42,7 @@ def img(path):
 
 
 def material(name, rgba, rough=0.4, metal=0.0, tex=None, normal=None,
-             roughmap=None, scale=(1, 1, 1)):
+             roughmap=None, scale=(1, 1, 1), tint=(1, 1, 1)):
     m = bpy.data.materials.new(name)
     m.diffuse_color = (*rgba, 1)
     m.use_nodes = True
@@ -57,12 +57,20 @@ def material(name, rgba, rough=0.4, metal=0.0, tex=None, normal=None,
         mapn = nt.nodes.new("ShaderNodeMapping")
         mapn.location = (-500, 0)
         mapn.inputs["Scale"].default_value = scale
-        nt.links.new(coord.outputs["Generated"], mapn.inputs["Vector"])
+        nt.links.new(coord.outputs["UV"], mapn.inputs["Vector"])
         t = nt.nodes.new("ShaderNodeTexImage")
         t.location = (-300, 100)
         t.image = img(tex)
         nt.links.new(mapn.outputs["Vector"], t.inputs["Vector"])
-        nt.links.new(t.outputs["Color"], bsdf.inputs["Base Color"])
+        if tint != (1, 1, 1):
+            mix = nt.nodes.new("ShaderNodeMixRGB")
+            mix.blend_type = "MULTIPLY"
+            mix.inputs[0].default_value = 1.0
+            mix.inputs[2].default_value = (*tint, 1)
+            nt.links.new(t.outputs["Color"], mix.inputs[1])
+            nt.links.new(mix.outputs["Color"], bsdf.inputs["Base Color"])
+        else:
+            nt.links.new(t.outputs["Color"], bsdf.inputs["Base Color"])
         if normal:
             n = nt.nodes.new("ShaderNodeTexImage")
             n.location = (-300, -180)
@@ -84,7 +92,7 @@ def material(name, rgba, rough=0.4, metal=0.0, tex=None, normal=None,
 MAT = {
     "rosewood": material("Rosewood — polished Dalbergia-style", (0.20, 0.07, 0.05),
         0.22, 0.0, "rosewood_color_4k.png", "rosewood_normal_4k.png",
-        "rosewood_rough_4k.png", (3, 3, 1)),
+        "rosewood_rough_4k.png", (3, 3, 1), (0.62, 0.52, 0.50)),
     "rosewood_dark": material("Rosewood — end grain / shadow", (0.10, 0.035, 0.025), 0.28),
     "gilt": material("Burnished gilt bronze", (0.62, 0.42, 0.14), 0.26, 0.88,
         "gilt_bronze_color_2k.png", None, "gilt_bronze_rough_2k.png", (2, 2, 1)),
@@ -283,7 +291,7 @@ instance("Keybed — structural", kb, "CASE_AND_RIM", (0, 0.48, 0.735))
 
 # Fallboard / nameboard / cheek blocks
 fall = box_template("Fallboard", 1.40, 0.085, 0.055, MAT["rosewood"], 0.006, 3)
-instance("Fallboard — open", fall, "CASE_AND_RIM", (0, 0.775, 0.885), (math.radians(-18), 0, 0))
+instance("Fallboard — open", fall, "CASE_AND_RIM", (0, 0.765, 0.905), (math.radians(-22), 0, 0))
 nameboard = box_template("Nameboard", 1.40, 0.045, 0.10, MAT["rosewood"], 0.004, 2)
 instance("Nameboard", nameboard, "CASE_AND_RIM", (0, 0.735, 0.885))
 for sx in (-1, 1):
@@ -541,16 +549,16 @@ curl_t = sphere_template("Hair curl", 0.012, 32, 20, MAT["gilt"])
 flower_gilt = sphere_template("Gilt flower boss", 0.010, 32, 16, MAT["gilt"])
 for sx in (-1, 1):
     instance(f"Female head mount {'bass' if sx<0 else 'treble'}", head_t,
-             "GILT_MOUNTS_AND_SCULPTURE", (sx*0.735, 0.565, 0.965),
-             (0, math.radians(-90 if sx<0 else 90), 0))
+             "GILT_MOUNTS_AND_SCULPTURE", (sx*0.700, 0.615, 0.965),
+             (0, math.radians(-90 if sx<0 else 90), 0), (1.45, 1.45, 1.45))
     for i in range(11):
         instance(f"Gilt hair lock {sx}_{i}", curl_t, "GILT_MOUNTS_AND_SCULPTURE",
-                 (sx*0.738, 0.52+i*0.011, 1.08+0.01*math.sin(i)), (0,0,0),
-                 (1.5,0.7,0.7))
+                 (sx*0.712, 0.56+i*0.013, 1.10+0.012*math.sin(i)), (0,0,0),
+                 (2.0,0.9,0.9))
     for i in range(5):
         instance(f"Floral headband flower {sx}_{i}", flower_gilt,
                  "GILT_MOUNTS_AND_SCULPTURE",
-                 (sx*0.752, 0.53+i*0.022, 1.115-0.006*i))
+                 (sx*0.724, 0.57+i*0.026, 1.155-0.007*i))
 # Empire-style columnar mounts flanking the cheek inlay
 column = cyl_template("Empire gilt mount", 0.010, 0.14, 32, 8, MAT["gilt"])
 for sx in (-1, 1):
@@ -652,7 +660,7 @@ def camera(name, loc, target, lens=50):
     return ob
 
 camera("CAM_HERO_3Q",(-2.55,3.05,1.78),(0,0.18,0.88),45)
-camera("CAM_FRONT",(-0.35,3.10,1.20),(0,0.42,0.86),52)
+camera("CAM_FRONT",(-0.35,3.10,1.55),(0,0.42,0.86),52)
 camera("CAM_SIDE",(-3.60,0.10,1.30),(0,-0.20,0.90),52)
 camera("CAM_REAR",(2.40,-3.10,1.75),(0,-0.45,0.92),44)
 camera("CAM_INTERIOR_TOP",(0.10,0.45,3.05),(0,-0.35,0.84),48)
