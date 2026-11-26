@@ -60,3 +60,14 @@ per-project layout, this note must be updated.
 7. Materials and 8K texture sources.
 8. Render package and independent GLB inspection.
 9. Build report, reference log, quality gate, final push and commit hash.
+
+## Build-session updates (2026-11-26)
+
+- Git LFS was installed and configured locally (`.gitattributes`: `*.blend`,
+  `*.glb`, `*.png`) because ordinary Git rejects files above 100 MB. This is a
+  repository-convention adjustment for large binary assets; no existing project
+  was changed.
+- `research/1899-bluthner-grand-piano/` holds downloaded primary reference
+  images, following the repository's existing per-project research convention.
+- The master `.blend` and GLB were rebuilt after a material/ornament refinement
+  pass; the committed versions are the ones used for the final render batch.
