@@ -13,6 +13,14 @@ BLEND = "/home/user/3dprojects/assets/1899-bluthner-grand-piano/1899_bluthner_gr
 bpy.ops.wm.open_mainfile(filepath=BLEND)
 scene = bpy.context.scene
 scene.camera = bpy.data.objects[cam_name]
+# Interior inspection views remove the open lid so the frame/strings/action
+# are not occluded; the hero and product views keep it intact.
+if cam_name in {"CAM_INTERIOR_TOP", "CAM_ACTION", "CAM_MACRO_STRINGS"}:
+    lid = bpy.data.objects.get("Lid — rosewood with inlaid border")
+    if lid:
+        lid.hide_render = True
+        for child in lid.children:
+            child.hide_render = True
 scene.render.resolution_x = w
 scene.render.resolution_y = h
 scene.render.resolution_percentage = 100

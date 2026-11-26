@@ -1,6 +1,7 @@
 # Open work
 
-- [ ] Finish visual review of the 15-view render batch in `renders/1899-bluthner-grand-piano/`.
+- [x] Finish the 15-view render batch and a contact-sheet review.
+- [ ] Rework the female-head, lion and sunflower macro geometry: current close-ups are too stylised for the BADA reference.
 - [ ] Refine the female-head reliefs, winged lions and sunflower carvings toward the BADA macro photographs.
 - [ ] Re-render hero/front/interior macros at 3840×2160 where memory permits; export EXRs for the hero set.
 - [ ] Add the 360° turntable sequence and short mechanical demonstration (lid, fallboard, keys, hammers, pedals).

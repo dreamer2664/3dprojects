@@ -16,11 +16,11 @@ technical constraint recorded.
 | Music desk glass/filigree/Tree of Life | PARTIAL | Geometry and glass shader present; close-up pending final review. |
 | ≥40M evaluated triangles | PASS | 318,543,028 evaluated render triangles measured by `validate_scene.py`. |
 | ≥55 working reference URLs | PASS | 60 logged in `REFERENCE_LOG.md`; 43 returned HTTP success, 17 bot-blocked and honestly marked. |
-| High-resolution render set | PARTIAL | 15-view batch at 1600×900 running; 6–8K/EXR not reached on 2-CPU/1.9 GB sandbox. |
+| High-resolution render set | PARTIAL | All 15 views completed at 1600×900 with corrected inspection cameras; 6–8K/EXR not reached on 2-CPU/1.9 GB sandbox. |
 | `.blend` opens cleanly | PASS | Reopened by validation, export and render scripts. |
 | GLB passes independent inspection | PARTIAL | Reimported into clean scene: 2,435 meshes, 321M triangles, 19 materials, 10 images; visual per-part inspection pending. |
 | Reports truthful and complete | PASS | This gate, build report, source log and decisions record gaps explicitly. |
-| Committed and pushed to exact branch | PARTIAL | Setup commit pushed; build milestones still being committed. |
+| Committed and pushed to exact branch | PASS | Setup, research, master scene, refinement and render commits pushed; final commit hash reported in chat. |
 
 ## Verified technical blockers
 

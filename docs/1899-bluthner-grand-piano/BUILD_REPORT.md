@@ -89,6 +89,11 @@ marquetry macro · 9 butterfly glass desk · 10 fall ornament · 11 carved leg �
 12 lyre/pedals · 13 strings/bridges/pins · 14 rosewood grain · 15 closed-lid
 product.
 
+After the first pass, nine inspection cameras were retargeted with
+`scripts/fix_cameras.py`; the interior views hide the lid during rendering so
+the frame/strings/action are visible, while hero/product views keep it. All
+15 final images at 1600×900 were then rendered, plus a contact sheet.
+
 Test renders at 1280×720 and final batch at 1600×900 are genuine Cycles renders
 of the Blender scene. The 3840×2160/6–8K target, EXRs, turntable and mechanical
 animation remain open work (see `TODO.md`) because of the 2-CPU/1.9 GB sandbox.
