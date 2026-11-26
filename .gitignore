@@ -9,3 +9,6 @@ aprilia-rsv4-factory/research/pdf/RSV4_1100_Factory_Service_Station_Manual_2Q000
 github_pat.txt
 *.pat
 *.token
+# Scratch / logs / backups
+*.log
+renders/**/_*.png
