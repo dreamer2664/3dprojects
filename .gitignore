@@ -3,3 +3,9 @@
 __pycache__/
 # Third-party dealer manual: kept in local archive only (size/rights); URL in SOURCE_REGISTER.md
 aprilia-rsv4-factory/research/pdf/RSV4_1100_Factory_Service_Station_Manual_2Q000401.pdf
+
+# Credentials — never stage these (added 2026-11-26)
+.secrets/
+github_pat.txt
+*.pat
+*.token
