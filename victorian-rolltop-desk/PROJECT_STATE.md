@@ -34,33 +34,43 @@ This is the only deviation from the literal paths in brief §11; nothing else is
 
 | Resource | Measured value | Consequence for the brief |
 |---|---|---|
-| Blender | **not installed** at session start | must be provisioned before any geometry work |
+| Blender | **not installed** at session start → **4.5.3 LTS now provisioned** at `~/.local/opt/blender` (see `scripts/provision_blender.sh`); headless + Cycles CPU smoke-tested | geometry and render work can proceed |
 | CPU | 2 cores | Cycles CPU path tracing only; no GPU/OptiX |
 | RAM | ~1.9 GB total | hard ceiling on evaluated geometry and on frame-buffer size |
 | Disk free | ~20 GB on `/` | sufficient for `.blend` masters + textures, tight for large EXR sets |
 | OS | Debian 13 (trixie), Python 3.13 | no `bpy` pip wheel for 3.13; use the official Linux tarball build from blender.org |
 
-### Known risk to brief §9 / §10 (must be documented, not hidden)
+### Measured ceiling — brief §9 / §10 (evidence in `docs/victorian-rolltop-desk/ENVIRONMENT_PROBE.md`)
 
-- **30M evaluated triangles** in one scene is near-certainly unreachable inside ~1.9 GB of RAM
-  (Blender mesh data alone ≈ 40–60 B/triangle, plus sources and render buffers).
-  Mitigation per brief §9: build **logical subassemblies** (pedestal carcasses, tambour + tracks,
-  upper fitted interior, pedestal drawers, hardware) as separate high-detail parts, keep a single
-  master `.blend` that links them, and count triangles from the evaluated depsgraph per part,
-  summed honestly with the measurement method stated in `BUILD_REPORT.md`.
-- **8K / 6K renders** need ≈ 0.5 GB per float RGBA buffer; 8K multi-layer EXR will exceed RAM.
-  Mitigation: render at 4K-class resolutions (≥ 3840×2160 as the brief's stated minimum), or tile/
-  crop for macro shots, and record exactly which frames were reduced and why. No claim will be made
-  of an 8K render that was not actually produced at 8K.
+`scripts/probe_hardware.py` divides one mesh until the kernel kills Blender:
 
-No reduced target will be asserted as achieved; the gap between the brief and the hardware will be
-stated with numbers in `QUALITY_GATE.md`.
+| Subdiv level | Evaluated tris | Peak RSS | Result |
+|---|---|---|---|
+| 10 | 8.39 M | 654 MB | OK, 1.3 s |
+| 11 | 16.8 M | — | **OOM-killed** (exit 137, `anon-rss 1.29 GB`) |
+
+So a realistic budget for the whole master in this sandbox is **≈ 8–12 M evaluated triangles**,
+at ≈ 82 B of RSS per evaluated triangle — not the brief's ≥ 30 M. Consequences:
+
+- **Geometry (§9):** build the desk as **logical subassemblies** (pedestal carcasses, tambour +
+  tracks, upper fitted interior, pedestal drawers, hardware), each an independently modelled
+  high-detail part in its own `.blend`/collection, with the master linking/referencing them. Triangle
+  counts will be reported **per part from the evaluated depsgraph** and summed, with the method and
+  the per-part memory measured at build time — never as hypothetical subdivision levels.
+- **Renders (§10):** one 8K float RGBA layer is ≈ 530 MB, one 4K layer ≈ 132 MB, before Cycles
+  buffers and BVH. 8K stills and multi-layer EXR masters are therefore **not producible here**.
+  4K (3840×2160, the brief's stated minimum) is the realistic target, with macro shots done as
+  cropped 4K frames.
+
+Neither shortfall will be silently absorbed: the exact gap between brief target and delivered
+numbers is recorded in `QUALITY_GATE.md`. These are hardware limits, not a choice to reduce detail.
 
 ## 3. Milestones (commit log of record)
 
 | # | Milestone | Status |
 |---|---|---|
-| 0 | Branch + scaffold + credential safety + environment audit | **done** (this commit) |
+| 0 | Branch + scaffold + credential safety + environment audit | **done** |
+| 0b | Blender provisioned + hardware ceiling measured (`ENVIRONMENT_PROBE.md`) | **done** |
 | 1 | Research lock: ≥ 45 verified URLs, `REFERENCE_LOG.md` | pending |
 | 2 | Proportions / dimension control block (1.52 × 0.91 × 1.38 m, 77.5 cm writing height check) | pending |
 | 3 | Pedestal carcasses, fielded panels, plinth, castors | pending |
